@@ -26,3 +26,33 @@ function handleFormSubmit(event) {
 
 document.querySelector('#form').addEventListener('submit', handleFormSubmit);
 
+
+
+function displayContacts(addressBook) {
+    const contactContainer = document.querySelector('#contacts');
+    contactContainer.innerHTML = '';
+
+    for (const contactId in addressBook.contacts) {
+        const contact = addressBook.contacts[contactId];
+
+        const contactElement = document.createElement('div');
+        contactElement.classList.add('contact-card'); // Add the contact card class
+        contactElement.innerHTML = `
+            <h3>${contact.firstName} ${contact.lastName}</h3>
+            <p>Phone: ${contact.phoneNumber}</p>
+            <p>Email: ${contact.email}</p>
+            <button id="editBtn-${contactId}">Edit</button>
+            <button id="deleteBtn-${contactId}">Delete</button>`;
+        contactContainer.appendChild(contactElement);
+
+        // Attach event listeners to edit and delete buttons
+        const editButton = contactElement.querySelector(`#editBtn-${contactId}`);
+        const deleteButton = contactElement.querySelector(`#deleteBtn-${contactId}`);
+
+        editButton.addEventListener('click', () => editContact(contactId));
+        deleteButton.addEventListener('click', () => deleteContact(contactId));
+    }
+}
+
+
+
