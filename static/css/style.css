@@ -12,3 +12,21 @@
             padding: 40px 20px;
         }
 
+        /* Title Styles */
+        .title {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #66A3FF;
+        }
+
+        /* Form Styles */
+        .form {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s;
+            transform-style: preserve-3d;
+        }
