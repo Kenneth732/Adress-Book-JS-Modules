@@ -42,4 +42,20 @@
             margin-bottom: 20px;
         }
 
-      
+        .input {
+            width: 100%;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 8px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 1rem;
+            outline: none;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .input:focus,
+        .input:active {
+            background: rgba(0, 0, 0, 0.7);
+            color: #66A3FF;
+        }
