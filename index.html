@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AddressBook</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">AddressBook</h1>
+        <form id="form" class="form">
+            <h2 class="form-title">Add a New Contact</h2>
+            <div class="input-container">
+                <input type="text" id="firstNameInput" class="input" required>
+                <label class="input-label">First Name</label>
+            </div>
+            <div class="input-container">
+                <input type="text" id="lastNameInput" class="input" required>
+                <label class="input-label">Last Name</label>
+            </div>
+            <div class="input-container">
+                <input type="text" id="phoneInput" class="input">
+                <label class="input-label">Phone Number</label>
+            </div>
+            <div class="input-container">
+                <input type="text" id="emailInput" class="input" required>
+                <label class="input-label">Email</label>
+            </div>
+            <button type="submit" class="submit-button">Add Contact</button>
+        </form>
+
+        <div id="contacts" class="contacts">
+            <!-- ... -->
+        </div>
+    </div>
+    <script src="bundle.js"></script>
+</body>
+</html>
