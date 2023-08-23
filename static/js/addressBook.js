@@ -36,5 +36,26 @@ function AddressBook() {
     delete this.contacts[id];
     return true;
   };
+  
+  AddressBook.prototype.editContact = function (id, updatedData) {
+    if (this.contacts[id] !== undefined) {
+      const contact = this.contacts[id];
+      for (const key in updatedData) {
+        if (contact.hasOwnProperty(key)) {
+          contact[key] = updatedData[key];
+        }
+      }
+      return true;
+    }
+    return false;
+  };
+  
+  module.exports = AddressBook;
+  
+
+
+
+
+
 
 
